@@ -1,0 +1,44 @@
+#!/usr/bin/env python
+
+def printpic(board,size):
+    
+    for i in range(size):
+        print(str(i)+":" , end = "")
+
+    for i in range(size):
+        print()
+        print(str(i)+":", end= " ")
+        for j in range(size):
+            print(board[i][j], end=" ")
+            
+if __name__=="__main__":
+    print('etch-a-sketc')
+    print('size of pic')
+    size = int(input())
+
+    board = [['.' for _ in range(size)] for _ in range(size)]
+    printpic(board,size)
+    print()
+    current_x,current_y=int(size/2),int(size/2)
+
+    while True:
+        printpic(board,size)
+
+        # Get user input
+        move = input("Move cursor (W/A/S/D), 'Q' to quit, 'R' to erase: ").upper()
+
+        if move == 'Q':
+            break
+        elif move == 'W' and current_y > 0:
+            current_y -= 1
+        elif move == 'S' and current_y < size - 1:
+            current_y += 1
+        elif move == 'A' and current_x > 0:
+            current_x -= 1
+        elif move == 'D' and current_x < size - 1:
+            current_x += 1
+
+        # Mark the current position
+        board[current_y][current_x] = 'x'
+        if move =='R':
+            board = [['.' for _ in range(size)] for _ in range(size)]

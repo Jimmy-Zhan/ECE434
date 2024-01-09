@@ -39,3 +39,14 @@ Period:300us	Frequency:3.3kHz
 |Max Freq(Hz)|3.5k|2k|3.4k|50k|25k|50k|3k|
 |CPU Usage|70%|100%|16%|100%|100%|100%|100%|
 
+# hw02 grading
+
+| Points      | Description | Comment
+| ----------- | ----------- | -------
+|  2/2 | Buttons and LEDs 
+|  8/8 | Etch-a-Sketch works
+|  2/2 | Measuring a gpio pin on an Oscilloscope 
+|  2/2 | Questions answered
+|  2/4 | Table complete | Your tables didn't draw corectly.
+|  2/2 | gpiod
+| 18/20   | **Total**
